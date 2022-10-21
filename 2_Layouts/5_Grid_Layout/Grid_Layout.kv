@@ -1,0 +1,115 @@
+GridLayoutExample:
+
+<GridLayoutExample@GridLayout>:
+# Need to specify rows and/or cols
+    cols:2
+    Button:
+        text:"Awesomeness"
+        size_hint: (.5, 1)
+    Button:
+        text:"Cool Deal"
+        size_hint: (None, 1)
+        width: "150dp"
+    Button:
+        text:"Bananas"
+        size_hint: (.5, 1)
+    BoxLayoutExample: # Can Add Another Layout from below.
+    Button:
+        text:"Cool Beans"
+    Button:
+        text:"Apples"
+        size_hint: (.5, 1)
+    Button:
+        text:"Oranges"
+    Button:
+        text:"Ninjas"
+        size_hint: (.5, 1)
+    Button:
+        text:"Kiwis"
+
+
+<AnchorLayoutExample>:
+    # anchor_x: 'right'
+    # anchor_x: 'left'
+    anchor_x: 'center'
+    # anchor_y: 'top'
+    anchor_y: 'bottom'
+    BoxLayout:
+        Button:
+            text: "Ninja"
+            size_hint: .25, .25
+
+            # anchor_y: 'top'
+        Button:
+            text: "Samurai"
+            size_hint: .25, .25
+            pos_hint: 
+        # Image: 
+        #     source = "logo.png"
+        TextInput:
+            multiline: False
+            padding: ('10dp', '10dp', '10dp', '10dp')
+            size_hint: (.5, .1)
+            font_size: 25
+        
+
+
+
+#If you want to switch to this layout, just change "AnchorLayoutExample" at the top.
+<BoxLayoutExample>:
+    orientation: 'vertical'
+    spacing: '10dp'
+    Label:
+        text: "CrypTxRx"
+    Button:
+        text: "A"
+        size_hint: .50, .5
+        color: "#FFFFFF"
+        pos_hint: {"center_x":.5}
+    BoxLayout:
+        orientation: "horizontal"
+        spacing: '10dp'
+        Button:
+            text: "Button 1"
+            size_hint: 1, 1
+            color: "#FFFFFF"
+        Button:
+            text: "Button 2"
+            size_hint: 1, 1
+            color: "#FFFFFF"
+        Button:
+            text: "Button 3"
+            size_hint: 1, 1
+            color: "#FFFFFF"
+        Button:
+            text: "Button 4"
+            size_hint: 1, 1
+            color: "#FFFFFF"
+    Button:
+        spacing: '10dp'
+        text: "C"
+        size: "100dp", "80dp"
+        size_hint: .5, .5
+        pos_hint:{"center_x":.5}
+
+        color: "#FFFFFF" #White
+
+<MainWidget>:
+    Button:
+        text: "Hello Ninja"
+        # size: 200, 100 #in pixels... this is a problem for different screen sizes.
+        # pos: 200, 200
+        size: "200dp", "80dp"
+        pos: "40dp", "40dp"
+        color: "#FFFFFF" #White
+    Button:
+        text: "Button 2"
+        size: "100dp", "40dp"
+        pos: "300dp", "50dp"
+        color: 0, 0, 1, 1
+
+    Label:
+        text: "Random Text Here."
+        size: "100dp","80dp"
+        pos: "300dp", "300dp"
+        color: 1 , 2 , 0 , 1

@@ -1,0 +1,60 @@
+GanacheAppLayout:
+
+<GanacheAppLayout>:
+    cols:1
+    Label:
+        text:""
+    Label:
+        text: "CrypTxRx"
+        size_hint: 2,1
+        font_size: "50dp"
+    Image:
+        source: "logo.png"
+        size_hint: 3,3
+    Label:
+        text: "Enter the amount you'd like to transfer:"
+        size_hint: 1,1
+    TextInput:
+        id: 1
+        text:'Enter Eth Amount'
+        padding: (20, 20, 20, 20)
+        # font_size: "25dp"
+    Label:
+        text: "Enter your wallet address:"
+        size_hint: 1,1
+    TextInput:
+        id: 2
+        text:'Your Wallet Address'
+        padding: (20, 20, 20, 20)
+        font_size: 25
+    Label:
+        text: "Enter your secret key:"
+        size_hint: 1,1
+    TextInput:
+        id: 3
+        text:'Your Secret Key'
+        padding: (20, 20, 20, 20)
+        font_size: 25
+    Label:
+        text: "Enter the wallet you'd like to transfer to:"
+        size_hint: 1,1
+    TextInput:
+        id: 4
+        text:'Their Wallet Address'
+        padding: (20, 20, 20, 20)
+        font_size: 25
+    Button:
+        text: "Submit Transfer"
+        size: "100dp", "80dp"
+        pos: "100dp", "100dp"
+        color: "#FFFFFF" #White
+    # Button:
+    #     text: "B"
+    #     size: "100dp", "80dp"
+    #     pos: "40dp", "40dp"
+    #     color: "#FFFFFF" #White
+    # Button:
+    #     text: "C"
+    #     size: "100dp", "80dp"
+    #     pos: "40dp", "40dp"
+    #     color: "#FFFFFF" #White

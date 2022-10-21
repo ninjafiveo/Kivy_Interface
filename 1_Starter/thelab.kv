@@ -1,0 +1,25 @@
+# This file needs to be in the same file as the main.py file.
+
+#Note - The kv file is not needed. If you use .build inside the python, all the following can be put directly into python.
+MainWidget:
+
+# Note, in kv files, "=" signs are not used. This is for the layout only. This is not much different than Flutter. 
+<MainWidget>:
+    Button:
+        text: "Hello Ninja"
+        # size: 200, 100 #in pixels... this is a problem for different screen sizes.
+        # pos: 200, 200
+        size: "200dp", "80dp"
+        pos: "40dp", "40dp"
+        color: "#FFFFFF" #White
+    Button:
+        text: "Button 2"
+        size: "100dp", "40dp"
+        pos: "300dp", "50dp"
+        color: 0, 0, 1, 1
+
+    Label:
+        text: "Random Text Here."
+        size: "100dp","80dp"
+        pos: "300dp", "300dp"
+        color: 1 , 2 , 0 , 1

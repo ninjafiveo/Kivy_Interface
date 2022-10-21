@@ -1,0 +1,49 @@
+BoxLayoutExample:
+
+<BoxLayoutExample>:
+    orientation: 'vertical'
+    Label:
+        text: "CrypTxRx"
+    Button:
+        text: "A"
+        # size: "100dp", "80dp"
+        size_hint: .50, .25 # % Width & Height. Size will change proportionally to window size.
+        color: "#FFFFFF" #White
+        # position is pop_hint. 
+        # x, center_x, right
+        # y, center_y, top
+        # pos_hint: {"x": .75} # Moves button 75% across the screen. Part of it will be missing. If 1, it would move it 100% off the screen. 
+        # pos_hint: {"right": 1} # Moves button all the way to the right. 
+        pos_hint: {"center_x":.5} # moves the center of the button to the middle of the screen. 
+    Button:
+        text: "B"
+        size_hint: None, None #None ignores the size height proportions of size_hint and then pays attention to the size.
+        size: "150dp", "80dp" #fixed height and width that does not changed based on windo size.
+        color: "#FFFFFF" #White
+    Button:
+        text: "C"
+        size: "100dp", "80dp"
+        width: "200dp"
+        size_hint: None, 2 # you can mix and match. 1 = 100% of the equal proportion. If there is 4 widgets, 1 = .25 of the screen. 2 = .5 of the screen. 
+
+        color: "#FFFFFF" #White
+
+<MainWidget>:
+    Button:
+        text: "Hello Ninja"
+        # size: 200, 100 #in pixels... this is a problem for different screen sizes.
+        # pos: 200, 200
+        size: "200dp", "80dp"
+        pos: "40dp", "40dp"
+        color: "#FFFFFF" #White
+    Button:
+        text: "Button 2"
+        size: "100dp", "40dp"
+        pos: "300dp", "50dp"
+        color: 0, 0, 1, 1
+
+    Label:
+        text: "Random Text Here."
+        size: "100dp","80dp"
+        pos: "300dp", "300dp"
+        color: 1 , 2 , 0 , 1

@@ -1,0 +1,181 @@
+WidgetsExample:
+
+<WidgetsExample>:
+    cols: 3
+    ToggleButton: #Toggle has on/off states
+        id:"" 
+        text:'OFF'
+        on_state: root.on_toggle_button_state(self) #this is different from on_press. This will trigger events while on and stop when off. ! Pass through the self argument to get the status of the state.
+        size_hint: None, 1
+        width: "100dp"
+    Button:
+        text: "County the Counter"
+        on_press: root.on_button_click() 
+        disabled: not root.count_enabled # use "not" to invert the boolean. You can use this to disable a button when it is enabled when you don't want it to be. 
+    Label:
+        text: root.my_text
+        font_name: 'fonts/Lcd.ttf'
+        font_size: "80dp"
+        color: 1, .5, 1, 1
+    Switch:
+        text:'text'
+        size_hint: None, 1
+        width: "100dp"
+        on_active: root.on_switch_active(self)
+
+<PageLayoutExample@PageLayout>:
+    MainWidget: 
+    BoxLayoutExample:
+    AnchorLayoutExample:
+    ScrollViewExample:
+    GridLayoutExample:
+
+    
+
+
+<ScrollViewExample@ScrollView>:
+    StackLayoutExample:
+        size_hint: 1, None 
+        height: self.minimum_height
+
+
+<StackLayoutExample>:
+# KV is in Python Code
+    # Orientation from left-right("rl-tb", "rl-bt", "lr-tb", "lr-bt") and top-bottom
+    # orientation: "rl-tb"
+    # orientation: "lr-tb"
+    # orientation: "rl-bt"
+    # orientation: "lr-bt"
+    # padding:("20dp", "20dp", "20dp", "20dp")
+    # spacing: "20dp", "20dp"
+    
+    # Button:
+    #     text: "Stack This"
+    #     size_hint: .2,.2
+    # Button:
+    #     text: "B"
+    #     size_hint: .2,.2
+    # Button:
+    #     text: "C"
+    #     size_hint: .2,.2
+    # Button:
+    #     text: "D"
+    #     size_hint: .2,.2
+    # Button:
+    #     text: "E"
+    #     size_hint: .2,.2
+    # Button:
+    #     text: "F"
+    #     size_hint: .2,.2
+    # Button:
+    #     text: "G"
+    #     size_hint: .2,.2
+
+<GridLayoutExample@GridLayout>:
+# Need to specify rows and/or cols
+    cols:2
+    Button:
+        text:"Awesomeness"
+        size_hint: (.5, 1)
+    Button:
+        text:"Cool Deal"
+        size_hint: (None, 1)
+        width: "150dp"
+    Button:
+        text:"Bananas"
+        size_hint: (.5, 1)
+    BoxLayoutExample:
+    Button:
+        text:"Cool Beans"
+    Button:
+        text:"Apples"
+        size_hint: (.5, 1)
+    Button:
+        text:"Oranges"
+    Button:
+        text:"Ninjas"
+        size_hint: (.5, 1)
+    Button:
+        text:"Kiwis"
+
+
+<AnchorLayoutExample>:
+    # anchor_x: 'right'
+    # anchor_x: 'left'
+    anchor_x: 'center'
+    # anchor_y: 'top'
+    anchor_y: 'bottom'
+    BoxLayout:
+        Button:
+            text: "Ninja"
+            size_hint: .25, .25
+
+            # anchor_y: 'top'
+        Button:
+            text: "Samurai"
+            size_hint: .25, .25
+            pos_hint: 
+        # Image: 
+        #     source = "logo.png"
+        TextInput:
+            multiline: False
+            padding: ('10dp', '10dp', '10dp', '10dp')
+            size_hint: (.5, .1)
+            font_size: 25
+        
+
+<BoxLayoutExample>:
+    orientation: 'vertical'
+    spacing: '10dp'
+    Label:
+        text: "CrypTxRx"
+    Button:
+        text: "A"
+        size_hint: .50, .5
+        color: "#FFFFFF"
+        pos_hint: {"center_x":.5}
+    BoxLayout:
+        orientation: "horizontal"
+        spacing: '10dp'
+        Button:
+            text: "Button 1"
+            size_hint: 1, 1
+            color: "#FFFFFF"
+        Button:
+            text: "Button 2"
+            size_hint: 1, 1
+            color: "#FFFFFF"
+        Button:
+            text: "Button 3"
+            size_hint: 1, 1
+            color: "#FFFFFF"
+        Button:
+            text: "Button 4"
+            size_hint: 1, 1
+            color: "#FFFFFF"
+    Button:
+        spacing: '10dp'
+        text: "C"
+        size: "100dp", "80dp"
+        size_hint: .5, .5
+        pos_hint:{"center_x":.5}
+
+        color: "#FFFFFF" #White
+
+<MainWidget>:
+    Button:
+        text: "Hello Ninja"
+        size: "200dp", "80dp"
+        pos: "40dp", "40dp"
+        color: "#FFFFFF"
+    Button:
+        text: "Button 2"
+        size: "100dp", "40dp"
+        pos: "300dp", "50dp"
+        color: 0, 0, 1, 1
+
+    Label:
+        text: "Random Text Here."
+        size: "100dp","80dp"
+        pos: "300dp", "300dp"
+        color: 1 , 2 , 0 , 1
